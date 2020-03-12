@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ABC Learning Center</title> 
+	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+
+	<link rel="stylesheet" href="css/fixed.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+
+<!--- Start Home Section -->
+ 
+<!-- Navigation -->
+<div id="main" class="container">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand" href="#"><img src="img/ud.png"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	
+	<div class="collapse navbar-collapse">
+		<ul class="navbar-nav ml-auto">  
+			<li class="nav-item">
+				<a class="nav-link" href="#">Home</a> 
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#about">About</a> 
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#course">Course</a> 
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#contact">Contact</a>  
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#registration">Registration</a> 				
+			</li>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#privacy">Our Policy</a> 				
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- End Navigation-->
+
+<!-- Start Landing Page -->
+<div id="pageContent">
+<div class="landing">
+	<div class="home-wrap">
+		<div class="home-inner">
+		</div>
+	</div>
+</div>
+
+<div class="caption text-center">
+	<h1>Welcome to ABC Learning Center</h1>
+	<h3>Learn & Implement</h3>
+	<a class="btn btn-outline-light btn-lg" href="#registration">Register Now</a>
+</div>
+</div>
+
+<!-- End landing Page -->
+
+</div>
+<!--- End Home Section -->
+
+<!--- Start Footer Section -->
+<footer>
+<div class="row justify-content-center">
+	
+	<div class="col-md-5 text-center">
+		<img src="img/ud.png">
+		</br>
+		<p> At our core is a collection of multiple course and development solutions that represent everything
+		our course need to compete in the Modern Education System. </p>
+		<a style="color: #1ebba3" href="#sitemap">Sitemap</a>			
+	</div>
+	<hr class="socket">
+	&copy; ABC Learning Center.
+</div>
+</footer>
+
+<!-- Return to Top -->
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+
+<!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<!--- End Footer Section -->
+
+<!--- Script Source Files -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+<!--- End of Script Source Files -->
+
+<script> 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+</script>
+
+</body>
+</html>
+
+
+
+

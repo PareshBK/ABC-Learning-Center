@@ -1,0 +1,203 @@
+<style>
+body
+{
+margin: 0;
+padding:0;
+background-size: cover;
+}
+.sidebar
+{
+position: fixed;
+top: 0;
+left: -50%;
+width: 50%;
+height: 100%;
+background: rgba(0,0,0,.2);
+transition: 0.5s;
+}
+.sidebar.active
+{
+left: 0;
+}
+.toggle
+{
+position: absolute;
+top: 75%;
+transform: translateY(-50%);
+right: -80px;
+width: 70px;
+height: 70px;
+background: #1ebba4;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.toggle:before
+{
+content: '';
+position: relative;
+left: -10px;
+width: 30px;
+height: 30px;
+border-top: 4px solid #000;
+border-right: 4px solid #000;
+transform: rotate(45deg);
+transition: 0.5s;
+}
+.sidebar.active .toggle:before
+{
+transform: rotate(225deg);
+left: 10px;
+}
+.sidebar ul
+{
+margin: 0;
+padding: 0;
+transition: 0.5s;
+padding: 40px;
+transform: translateX(-100%);
+}
+.sidebar.active ul
+{
+transform: translateX(0%);
+transition-delay: 0.2s;
+}
+.sidebar ul li
+{
+list-style: none;
+}
+.sidebar ul li a 
+{
+margin-top: 2rem;
+position: relative;
+display: inline-block;
+color: #fff;
+font-size: 40px;
+font-family: Bahnschrift, Arial;
+text-decoration: none;
+padding: 0 20px;
+z-index: 2;
+transition: 0.5s;
+text-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.sidebar ul li a:hover
+{
+letter-spacing: 5px;
+transform: translateX(20px);
+}
+.sidebar ul li a:before
+{
+content: '';
+bottom: 0;
+left: 0;
+position: absolute;
+width: 100%;
+height: 50%;
+background: #1ebba4;
+z-index: -1;
+transform: scaleX(0);
+transform-origin: right;
+transition: transform 0.5s;
+}
+.sidebar ul li a:hover:before
+{
+transform: scaleX(1);
+transform-origin: left;
+transition: transform 0.5s;
+}
+
+.HS img{
+	width: 100%;
+}
+
+h5{
+	text-align: center;
+	font-size:30px;
+	
+}
+p{
+	text-align: center;
+	font-size:15px;
+}
+
+img{
+	align: center;
+}
+
+li{
+	color: #1ebba4;
+}
+
+.link {
+  margin-top: 10px;
+  overflow: hidden;
+  background-color: #1ebba3;
+  margin-bottom: 10px;
+}
+
+link ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1ebba4;
+}
+
+li {
+  float: left;
+}
+
+.link a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.link a:hover {
+  background-color: #fff;
+  color: #1ebba3;
+}
+
+
+</style>
+<body>
+ <div class="sidebar" id="sidebar">
+         <div class="toggle" onclick="toggle_div()"></div>
+	
+			<nav>
+			<ul>
+				<li><a href="#side"> HTML Course Details </a></li>
+				<li><a href="#htmlSchedule"> HTML Course Schedule</a></li>
+				<li><a href="#javaDetails"> Java Course Details </a></li>
+				<li><a href="#javaSchedule"> Java Course Schedule </a></li>
+				<li><a href="#netDetails"> .NET Course Details</a></li>
+				<li><a href="#netSchedule"> .NET Course Schedule </a></li>
+			</ul>
+			</nav>
+</div>
+<div class="HS">
+	<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Java-1024x341.png">
+</div>
+
+<h5></br><b> JAVA Course Details</b> </h5>
+<p>
+</br>
+This Java Course Details is valuable for all those who want to excel in Java Programming. Students, software engineers, developers have all enrolled for this Java training online course.</br> The list of JAVA Training Institutes is available below on this page.</br>
+
+Candidate those who register the Java Certification Course check the Eligibility, Fee and Syllabus details from here.</br> If you are search in any java job please read this complete article. We provide job resources for Java positions throughout the industry. Learn about Java develop career outlook and more details.</br>
+
+Java is a high level programming language. Sun Microsystems released the first public implementation as Java 1.0 in 1995. There are lots of applications and websites that will not work unless you have Java installed.</br> A Java programming that runs stands alone in a client or server. According to Computer dictionary definition of java means including related links, information, and terms.</br>
+
+You know, JAVA was originally called OAK, and was designed for handheld devices and set-top boxes. OAK was unsuccessful, so in 1995 Sun Microsystems changed the name to Java and modified the language to take advantage of the burgeoning World Wide Web.</br>
+
+Java Course is now divided into 3 parts, If you are looking for detailed Java Certification Course then click on the below topics:
+</br>
+Java Basics
+</br>
+Core Java</br>
+Advanced Java</br>
+</p>
+</body>

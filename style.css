@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+body{
+	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
+	color: #505962;
+	
+}
+
+.container{
+	max-width: 100%;
+	padding-right: 0;	
+	padding-left: 0;
+}
+
+/*--- Navigation --*/
+
+.navbar {
+	text-transform: upercase;
+	font-weight: 700;
+	font-size: 1rem;
+	letter-spacing: .1rem;
+	background: rgba(0,0,0,0.6)!important;
+}
+.navbar-brand img {
+	height: 3rem;
+}
+.navbar-nav li {
+	padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+	color: white;
+	padding-top: .8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #1ebba3;
+}
+
+/*--- Landing Page ---*/
+.home-inner {
+	background-image: url(img/computers.png);
+}
+.caption {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 38%;
+	z-index: 1;
+	color: white;
+	text-transform: uppercase;
+}
+.caption h1 {
+	font-size: 2.6rem;
+	font-weight: 700;
+	letter-spacing: .3rem;
+	text-shadow: .1rem .1rem .8rem black;
+	padding-bottom: 1rem;
+}
+.caption h3 {
+	font-size: 1.8rem;
+	text-shadow: .1rem 1.rem .5.rem black;
+	padding-bottom: 1.6rem;
+}
+.btn-lg {
+	border-width: medium;
+	border-radius: 0;
+	padding: .6rem 1.3rem;
+	font-size: 1.1rem;
+}
+
+/*---- About ----*/
+
+.col-12 h1 {
+	color: #1ebba3;
+}
+ 
+/*============= COURSE SECTION =============*/
+
+.narrow {
+  width: 75%;
+  margin: 1.5rem auto;
+  padding-top: 2rem;
+}
+.narrow h1 {
+    font-size: 2.4rem;
+  }
+.narrow{
+	text-align: center;
+}
+.btn-secondary {
+  border-width: medium;
+  border-radius: 0;
+  padding: .6rem 1.2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 1rem;
+  border-color: #1EBBA3;
+  background-color: #1EBBA3;
+  color: white;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  border-color: #189582;
+  background-color: #189582;
+  color: white;
+}
+
+h3.heading {
+	font-size: 1.9rem;
+	font-weight: 700;
+	text-transform: uppercas;
+	margin-bottom: 1.9rem;
+}
+.heading-underline {
+	width: 4rem;
+	height: .2rem;
+	background-color: #1ebba3;
+	margin: 0 auto 2rem;
+}
+
+
+/*---- Contact ---*/
+.contact {
+  width: 75%;
+  margin: 1.5rem auto;
+  padding-top: 3.5rem;
+}
+.contact h4{
+	font-size: 2.6rem;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: .3rem;	
+	padding-bottom: 1rem;
+}
+
+.contact-form {
+	width: 100%;
+	float: center;
+	background: white;
+	border: #DC3545;
+	outline: none;
+	border-bottom: 1px solid gray;
+	color:  #DC3545;
+	font-size: 18px;
+	margin-bottom: 16px;
+}
+
+input[type=submit]{
+	background: #1EBBA3;
+	border-color: transparent;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	height: 50px;
+	margin-top: 20px;
+}
+
+
+/*---- Registration: ---*/
+
+/*---- Privacy Policy ---*/
+
+/*---- Footer ---*/
+
+footer{
+	background-color: #40474e;
+	color: white;
+	padding: 2rem 0 2rem;
+}
+footer img {
+	height: 7rem;
+}
+footer a {
+	font-size: 20px;
+	color: white;
+}
+footer a:hover {
+	color: #1ebba3;
+}
+
+hr.socket {
+	width: 100%;
+	border-top: .2rem solid #666b71;
+	margin-top: 3rem;
+	
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: #1ebba4;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #1ebba4;
+    top: 5px;
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/

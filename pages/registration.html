@@ -1,0 +1,139 @@
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+.regpage {
+	padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+input[type="submit"]:hover{
+text-decoration:underline;
+}
+
+</style>
+<body>
+<h1 align="center" style="color: #1ebba4;"></br></br><b>Sign Up</b></h1>
+    <p align="center">Please fill in this form to create an account.</p>
+    <hr>
+
+<form  name = "myForm" style="border:1px solid #ccc">
+	
+	<div class="regpage">
+      
+               <label><b>Name</b></label>
+              <input type = "text" name = "name" />
+           
+            
+				<label><b>Email</b></label>
+              <input type = "text" name = "email" />
+            
+				<label><b>Contact</b></label>
+               <input type = "text" name = "contact" />
+			
+				<label><b>Course</b></label>
+                  <select name = "course">
+                     <option value = "-1" selected>[Select your Course]</option>
+                     <option >HTML</option>
+                     <option >JAVA</option>
+                     <option >.NET</option>
+                  </select>
+              </br>
+			  </br>
+				<input type = "submit" value = "Submit"  /> 	 <a href="#privacy">Terms & Service</a>
+   
+	</div>
+</form>
+
+<script type = "text/javascript">
+          function validate() {
+		   var emailID = document.myForm.email.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+      
+         if( document.myForm.name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.name.focus() ;
+            return false;
+         }
+		 if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID")
+            document.myForm.email.focus() ;
+            return false;
+         }
+         if( document.myForm.email.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+         if( document.myForm.course.value == "-1" ) {
+            alert( "Please provide your course!" );
+            return false;
+         }
+         return( true );
+      }
+   
+   $(document).ready(function() {
+ 
+    // process the form
+    $('form').submit(function(event) {
+		
+		
+		if( validate() ){
+		 
+		
+        // get the form data
+        // there are many ways to get this data using jQuery (you can use the class or id also)
+        
+
+		$name = $('input[name=name]').val() ;
+        $email = $('input[name=email]').val() ;;
+        $course = $('select[name=course]').val() ;
+
+//
+
+			// process the form
+			$.ajax({
+				type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+				url         : 'reg.php', // the url where we want to POST
+				data        : 'name=' + $name +  '&email=' + $email + '&course=' + $course , // our data object
+				dataType    : 'html',// what type of data do we expect back from the server
+			   success: function(data) { 
+				console.log(data); 
+					$('#typg').html(data);
+					    
+						window.location.replace("#thank");
+						$('#typg').show();
+			   }
+			})
+		}
+		event.preventDefault();
+		
+        
+    });
+
+});
+   
+   
+</script>
+</body>

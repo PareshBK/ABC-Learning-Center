@@ -1,0 +1,118 @@
+<html>   
+   <head>
+      <title>Form Validation</title>      
+      <script type = "text/javascript">
+          function validate() {
+		   var emailID = document.myForm.EMail.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+      
+         if( document.myForm.Name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+		 if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID")
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if( document.myForm.EMail.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if( document.myForm.Course.value == "-1" ) {
+            alert( "Please provide your course!" );
+            return false;
+         }
+         return( true );
+      }
+   //-->
+</script>
+   </head>
+   
+   <body>
+	<div class="form-signup" id="repg">
+      <form action = "/cgi-bin/test.cgi" name = "myForm" onsubmit = "return(validate());">
+         <table cellspacing = "2" cellpadding = "2" border = "1">
+            
+            <tr>
+               <td align = "right">Name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right">EMail</td>
+               <td><input type = "text" name = "EMail" /></td>
+            </tr>
+                      
+            <tr>
+               <td align = "right">Course</td>
+               <td>
+                  <select name = "Course">
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "1">HTML</option>
+                     <option value = "2">JAVA</option>
+                     <option value = "3">.NET</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Submit" /></td>
+            </tr>
+            
+         </table>
+      </form>    
+		</div>
+
+	<script>
+	
+	$(document).ready(function() {
+ 
+    // process the form
+    $('form').submit(function(event) {
+		
+		
+		if( repg() ){
+		 
+		
+        // get the form data
+        // there are many ways to get this data using jQuery (you can use the class or id also)
+        
+
+		$firstname = $('input[name=firstname]').val() ;
+        $lastname = $('input[name=laststname]').val() ;
+        $email = $('input[name=email]').val() ;;
+        $password = $('input[name=password]').val() ;
+
+//
+
+			// process the form
+			$.ajax({
+				type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+				url         : 'reg.php', // the url where we want to POST
+				data        : 'firstname=' + $firstname + '&lastname=' + $lastname + '&email=' + $email + '&password=' + $password , // our data object
+				dataType    : 'html',// what type of data do we expect back from the server
+			   success: function(data) { 
+				console.log(data); 
+					$('#thanks').html(data);
+					    
+						window.location.replace("#Thankyou");
+						$('#thanks').show();
+			   }
+			})
+		}
+		event.preventDefault();
+		
+        
+    });
+
+});
+		
+	</script>
+	
+   </body>
+</html>
